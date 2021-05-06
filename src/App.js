@@ -1,10 +1,12 @@
 import logo from "./logo.svg";
 import "./App.scss";
 import React, { useEffect } from "react";
+import sun from "./sun.svg";
 
-import { gsap } from "gsap";
+import { gsap, Power2 } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
+import CSSRulePlugin from "gsap/CSSRulePlugin";
+gsap.registerPlugin(ScrollTrigger, CSSRulePlugin);
 
 function App() {
   useEffect(() => {
@@ -16,11 +18,24 @@ function App() {
         pinSpacing: false,
       });
     });
+
+    gsap.to(".sun", 1, {
+      scale: 200,
+      scrollTrigger: {
+        trigger: ".two",
+        toggleActions: "restart none reverse none",
+        scrub: 1,
+      },
+    });
   }, []);
   return (
     <div className="container">
       <div className="panel one">
-        <h1 style={{ color: "white" }}>HI</h1>
+        <img className="sun" src={sun} />
+        <h1 className="title">
+          Hey <br />
+          <span className="underline"> there.</span>
+        </h1>
       </div>
       <div className="panel two">
         <h1 style={{ color: "white" }}>I AM</h1>

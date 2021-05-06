@@ -14,10 +14,18 @@
   justify-content: center;
   align-items: center;
   font-size: 48px;
+  text-align: center;
+  padding: 10%;
+
+  @media (max-width: 600px) {
+    font-size: 32px;
+  }
 }
 
 .one {
-  background-color: #8ab6d6;
+  background-color: black;
+  color: #eeeeee;
+  overflow: hidden;
 }
 
 .two {
@@ -26,4 +34,26 @@
 
 .three {
   background-color: black;
+}
+
+.underline {
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    height: 30%;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: #00adb5;
+    opacity: 0.7;
+  }
+}
+
+.sun {
+  position: absolute;
+  width: 10px;
+  z-index: -2;
+  overflow: hidden;
+  top: 20%;
 }
