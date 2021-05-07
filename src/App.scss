@@ -13,19 +13,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 48px;
-  text-align: center;
-  padding: 10%;
-
-  @media (max-width: 600px) {
-    font-size: 32px;
-  }
+  padding: 5%;
 }
 
 .one {
-  background-color: black;
-  color: #eeeeee;
-  overflow: hidden;
+  background-color: #6c63ff;
 }
 
 .two {
@@ -34,6 +26,23 @@
 
 .three {
   background-color: black;
+}
+
+.title {
+  top: 5%;
+  left: 5%;
+  font-size: 100px;
+  position: absolute;
+  z-index: 999;
+  text-align: left;
+  color: black;
+
+  @media (max-width: 600px) {
+    left: 24%;
+    text-align: center;
+    top: 5%;
+    font-size: 60px;
+  }
 }
 
 .underline {
@@ -45,15 +54,7 @@
     width: 100%;
     bottom: 0;
     left: 0;
-    background-color: #00adb5;
+    background-color: white;
     opacity: 0.7;
   }
-}
-
-.sun {
-  position: absolute;
-  width: 10px;
-  z-index: -2;
-  overflow: hidden;
-  top: 20%;
 }
