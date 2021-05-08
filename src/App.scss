@@ -13,18 +13,23 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 5%;
 }
 
 .one {
-  background-color: #6c63ff;
+  background-color: black;
+  padding: 5%;
 }
 
 .two {
-  background-color: #2978b5;
+  background-color: black;
 }
 
 .three {
+  background-color: #bdc7fe;
+  padding: 5%;
+}
+
+.four {
   background-color: black;
 }
 
@@ -35,14 +40,16 @@
   position: absolute;
   z-index: 999;
   text-align: left;
-  color: black;
+  color: white;
 
   @media (max-width: 600px) {
-    left: 24%;
-    text-align: center;
     top: 5%;
     font-size: 60px;
   }
+}
+
+.titleThree {
+  color: #39374e;
 }
 
 .underline {
@@ -54,7 +61,39 @@
     width: 100%;
     bottom: 0;
     left: 0;
-    background-color: white;
+    background-color: #6c63ff;
     opacity: 0.7;
+  }
+}
+
+#night,
+#manyStars,
+#sun,
+#leaves {
+  transform-origin: center;
+}
+
+svg {
+  width: 100%;
+}
+
+.footer-text {
+  color: white;
+}
+
+@media (min-width: 601px) {
+  /* width */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: black;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #6c63ff;
   }
 }
